@@ -71,11 +71,11 @@ char Pop()
 {
 	char bChar;
 	// Check the Underflow...
-	if( UnderflowedWithArgs( LessNumber( g_Top ) ) == TRUE )
+	if( UnderflowedWithArgs( g_Top ) == TRUE )
 		return FALSE;
-	g_Top--;
 	bChar = g_Stack[g_Top];
 	g_Stack[g_Top] = 0;
+	g_Top--;
 	return bChar;
 }
 
@@ -91,9 +91,9 @@ int Reverse(char* string)
 		return FALSE;
 	}
 	
+	nLen = (int) strlen( string );
 	pBegin = string;
 	pEnd = string + nLen;
-	nLen = (int) strlen( string );
 
 	// if nLen is Minus One, how problem occur?
 	// nLen = -1;
@@ -117,7 +117,8 @@ int Reverse(char* string)
 
 	// Push string.
 	while( *pBegin != NULL && 
-		pBegin <= pEnd ) {
+		pBegin <= pEnd ) 
+	{
 		nState = Push(*pBegin);
 		if( nState == FALSE )
 			break;
@@ -130,8 +131,9 @@ int Reverse(char* string)
 
 	// and Pop string.
 	// As a result, return reversed string.
-	while( Underflowed() == FALSE && 
-		pBegin <= pEnd ) {
+	while( Underflowed() == FALSE  && 
+		pBegin <= pEnd )
+	{
 		nState = Pop();
 		if( nState == FALSE )
 			break;
@@ -141,6 +143,16 @@ int Reverse(char* string)
 	return TRUE;
 }
 
+void Screen(char* bBuffer)
+{
+	if( bBuffer != NULL )
+	{
+		printf("%s\n", bBuffer);
+		if( Reverse(bBuffer) == TRUE )
+			printf("%s\n", bBuffer);
+	}
+}
+
 int main(int argc, char** argv)
 {
 	// Test Situation of Arguments.
@@ -148,12 +160,7 @@ int main(int argc, char** argv)
 	//char bBuffer[] = "String";
 	//char bBuffer[] = "";
 	//char* bBuffer = NULL;
-
-	if( bBuffer != NULL )
-	{
-		printf("%s\n", bBuffer);
-		if( Reverse(bBuffer) == TRUE )
-			printf("%s\n", bBuffer);
-	}
+	Screen( bBuffer );
+	
 	return 0;
 }

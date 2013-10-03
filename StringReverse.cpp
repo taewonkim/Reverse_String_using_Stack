@@ -47,14 +47,14 @@ int Underflowed()
 	return FALSE;
 }
 
-char Push(char c)
+char Push(char bChar)
 {
 	// Check the Overflow...
 	if( OverflowedWithArgs( g_Top ) == TRUE )
 		return FALSE;
 	g_Top++;
-	g_Stack[g_Top] = c;
-	return c;
+	g_Stack[g_Top] = bChar;
+	return bChar;
 }
 
 char Pop()

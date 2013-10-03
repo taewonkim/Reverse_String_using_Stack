@@ -7,8 +7,8 @@ void Screen( char* bBuffer )
 {
 	if( bBuffer != NULL )
 	{
-		fprintf(stdout, "%s\n", bBuffer);
+		fprintf(stdout, "Before: %s\n", bBuffer);
 		if( Reverse(bBuffer) == TRUE )
-			fprintf(stdout, "%s\n", bBuffer);
+			fprintf(stdout, "After : %s\n", bBuffer);
 	}
 }

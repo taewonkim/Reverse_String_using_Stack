@@ -15,7 +15,7 @@ int OverflowedWithArgs( int curPos )
 
 // if is Overflow...return 1
 // otherwise return 0
-// g_Top greater equal(ge) than STACK_LIMIT(245)
+// g_Top greater equal(ge) than STACK_LIMIT(256)
 int Overflowed( void )
 {
 	if( OverflowedWithArgs( g_Top ) == TRUE )

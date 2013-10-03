@@ -5,7 +5,7 @@
 #define FALSE		0
 #define ZERO		0
 
-static const int STACK_LIMIT = 16;
+static const int STACK_LIMIT = 256;
 static int g_Top = -1;
 static char g_Stack[STACK_LIMIT] = {0,};
 

@@ -121,8 +121,7 @@ int Reverse(char* string)
 
 	// and Pop string.
 	// As a result, return reversed string.
-	while( Underflowed() == FALSE  && 
-		pBegin <= pEnd )
+	while( Underflowed() == FALSE )
 	{
 		nState = Pop();
 		if( nState == FALSE )

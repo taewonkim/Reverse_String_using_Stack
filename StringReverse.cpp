@@ -1,18 +1,4 @@
-#include <stdio.h>
-
-#include "Const.h"
-#include "Stack.h"
-#include "Reverse.h"
-
-void Screen( char* bBuffer )
-{
-	if( bBuffer != NULL )
-	{
-		printf("%s\n", bBuffer);
-		if( Reverse(bBuffer) == TRUE )
-			printf("%s\n", bBuffer);
-	}
-}
+#include "Screen.h"
 
 int main( int argc, char** argv )
 {

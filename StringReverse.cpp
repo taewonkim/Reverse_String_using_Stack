@@ -47,20 +47,10 @@ int Underflowed()
 	return FALSE;
 }
 
-int GreateNumber(int nNum)
-{
-	return nNum + 1;
-}
-
-int LessNumber(int nNum)
-{
-	return nNum - 1;
-}
-
 char Push(char c)
 {
 	// Check the Overflow...
-	if( OverflowedWithArgs( GreateNumber( g_Top ) ) == TRUE )
+	if( OverflowedWithArgs( g_Top ) == TRUE )
 		return FALSE;
 	g_Top++;
 	g_Stack[g_Top] = c;
@@ -119,7 +109,7 @@ int Reverse(char* string)
 	while( *pBegin != NULL && 
 		pBegin <= pEnd ) 
 	{
-		nState = Push(*pBegin);
+		nState = Push( *pBegin );
 		if( nState == FALSE )
 			break;
 		pBegin++;
@@ -155,6 +145,8 @@ void Screen(char* bBuffer)
 
 int main(int argc, char** argv)
 {
+	(void) argc; (void) argv;
+
 	// Test Situation of Arguments.
 	char bBuffer[] = "String Rerverse using Stack";
 	//char bBuffer[] = "String";

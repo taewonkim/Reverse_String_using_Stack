@@ -5,7 +5,7 @@
 #ifndef __H_STACK__
 #define __H_STACK__
 
-#define STACK_LIMIT 8
+#define STACK_LIMIT 256
 
 int OverflowedWithArgs( int );
 int Overflowed( void );

@@ -58,8 +58,8 @@ char Pop( void )
 	// Check the Underflow...
 	if( UnderflowedWithArgs( g_Top ) == TRUE )
 		return FALSE;
+	g_Top--;
 	bChar = g_Stack[g_Top];
 	g_Stack[g_Top] = 0;
-	g_Top--;
 	return bChar;
 }

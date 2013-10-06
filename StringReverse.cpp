@@ -13,11 +13,13 @@ int main( int argc, char** argv )
 	//char* bBuffer = NULL;
 	//char bBuffer[] = "ÇÑ±Û TEST";
 	//char bBuffer[] = "-A";
-	char bBuffer[] = "abcdefghijklmnopqrstuvwxyz";
 	
-	//fprintf(stdout, "Buffer Size = %d\n", sizeof(bBuffer) );
-	
-	Screen( bBuffer );
+	//while(true)
+	{
+		//char bBuffer[] = "abcdefghijklmnopqrstuvwxyz";
+		char bBuffer[] = "123456789";
+		Screen( bBuffer );
+	}
 	
 	return 0;
 }

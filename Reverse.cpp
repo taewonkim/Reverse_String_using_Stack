@@ -8,7 +8,7 @@ int Reverse( char* string )
 {
 	int i = 0, nLen = 0;	
 	char *pBegin = 0, *pEnd = 0;
-	char nState = FALSE;
+	char nState = 0;
 
 	// if string is Null Situation, it is avoid ERROR Situation.
 	if( string == NULL ) {
@@ -28,21 +28,22 @@ int Reverse( char* string )
 
 	// if occur Overflow...
 	// return this function
-	if( OverflowedWithArgs( nLen ) == TRUE ) {
+	if( OverflowedWithArgs( nLen ) == TRUE )
+	{
 		pEnd = string + STACK_LIMIT;
 		fprintf(stderr, "Warning: In this String, Occured Overflow.\n");
 	}
 
 	// if occur Underflow...
 	// return this function
-	if( UnderflowedWithArgs( nLen ) == TRUE ) {
+	if( UnderflowedWithArgs( nLen ) == TRUE )
+	{
 		pEnd = string + ZERO;
 		fprintf(stderr, "Warning: In this String, Occured Underflow.\n");
 	}
 
 	// Push string.
-	while( *pBegin != NULL && 
-		pBegin <= pEnd ) 
+	while( pBegin <= pEnd ) 
 	{
 		nState = Push( *pBegin );
 		if( nState == FALSE )

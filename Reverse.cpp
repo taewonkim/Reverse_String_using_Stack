@@ -12,7 +12,7 @@ int Reverse( char* string )
 
 	// if string is Null Situation, it is avoid ERROR Situation.
 	if( string == NULL ) {
-		fprintf(stderr, "Warning: this String Argument is NULL.\n");
+		fprintf(stderr, "Error: this String Argument is NULL.\n");
 		return FALSE;
 	}
 	
@@ -27,7 +27,7 @@ int Reverse( char* string )
 	// nLen = 0;
 
 	// if occur Overflow...
-	// return this function
+	// look a warning message.
 	if( OverflowedWithArgs( nLen ) == TRUE )
 	{
 		pEnd = string + STACK_LIMIT;
@@ -35,7 +35,7 @@ int Reverse( char* string )
 	}
 
 	// if occur Underflow...
-	// return this function
+	// look a warning message.
 	if( UnderflowedWithArgs( nLen ) == TRUE )
 	{
 		pEnd = string + ZERO;

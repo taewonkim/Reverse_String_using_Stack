@@ -10,8 +10,9 @@ int Reverse( char* string )
 	char *pBegin = 0, *pEnd = 0;
 	char nState = 0;
 
-	// if string is Null Situation, it is avoid ERROR Situation.
-	if( string == NULL ) {
+	// if string is NULL Situation, it is avoid ERROR Situation.
+	if( string == NULL ) 
+	{
 		fprintf(stderr, "Error: this String Argument is NULL.\n");
 		return FALSE;
 	}

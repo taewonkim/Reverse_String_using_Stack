@@ -6,7 +6,7 @@
 
 int Reverse( char* string )
 {
-	int i = 0, nLen = 0;	
+	int nLen = 0;
 	char *pBegin = 0, *pEnd = 0;
 	char nState = 0;
 
@@ -27,7 +27,6 @@ int Reverse( char* string )
 		if( nState == FALSE )
 			break;
 		pBegin++;
-		i++;
 	}
 
 	// I needed Reinitialize pBegin Point Variable.

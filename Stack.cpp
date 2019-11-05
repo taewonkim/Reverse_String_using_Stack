@@ -5,8 +5,7 @@ static int g_Top = -1;
 static char g_Stack[STACK_LIMIT] = {0,};
 
 // Overflow...
-
-int OverflowedWithArgs( int curPos )
+static int OverflowedWithArgs( int curPos )
 {
 	if(curPos >= STACK_LIMIT)
 		return TRUE;
@@ -25,7 +24,7 @@ int Overflowed( void )
 
 // Underflow...
 
-int UnderflowedWithArgs( int curPos )
+static int UnderflowedWithArgs( int curPos )
 {
 	if( curPos < ZERO )
 		return TRUE;

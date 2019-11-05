@@ -28,19 +28,23 @@ int Reverse( char* string )
 
 	// if occur Overflow...
 	// look a warning message.
+	/*
 	if( OverflowedWithArgs( nLen ) == TRUE )
 	{
 		pEnd = string + STACK_LIMIT;
 		fprintf(stderr, "Warning: In this String, Occured Overflow.\n");
 	}
+	*/
 
 	// if occur Underflow...
 	// look a warning message.
+	/*
 	if( UnderflowedWithArgs( nLen ) == TRUE )
 	{
 		pEnd = string + ZERO;
 		fprintf(stderr, "Warning: In this String, Occured Underflow.\n");
 	}
+	*/
 
 	// Push string.
 	while( pBegin <= pEnd ) 
